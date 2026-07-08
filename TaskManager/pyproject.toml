@@ -3,9 +3,7 @@ name = "task-manager"
 version = "1.0.0"
 description = "Task Manager with User Authentication"
 requires-python = ">=3.9.0"
-dependencies = [
-    "tabulate>=0.9.0"
-]
+
 
 [project.scripts]
 task-manager = "task_manager.main:main"
