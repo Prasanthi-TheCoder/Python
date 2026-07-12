@@ -1,0 +1,38 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "test-cli"
+version = "1.0.0"
+dependencies = [
+    "click>=8.0"
+]
+authors = [
+    {name = "Prasanthi"}
+]
+description = "A simple CLI application using click"
+
+
+[project.scripts]
+task = "task_cli.cli:cli"
+
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+    "pytest-cov"
+]
+
+[tools.pytest.ini_options]
+markers = [
+    "cli: tests for cli commands"
+]
+testpaths= [
+    "tests"
+]
+python_files = [
+    "test_*.py"
+]
+addopts = "-ra -vs"
+
